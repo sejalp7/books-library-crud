@@ -1,0 +1,22 @@
+.pagination {
+    display: flex;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.pagination button {
+  color: black;
+  float: left;
+  padding: 6px 10px;
+  text-decoration: none;
+}
+
+.pagination button.active {
+  background-color: grey;
+  color: white;
+}
+
+.pagination button:hover:not(.active) {
+  background-color: #ddd;
+}
