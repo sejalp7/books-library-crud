@@ -22,6 +22,7 @@ export interface BookList {
   currentPage: number;
   totalPages: number;
   onPageChange: (currPage: number) => void;
+  booksPerPage: number;
 }
 
 export interface Paginator {
