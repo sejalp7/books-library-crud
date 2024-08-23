@@ -64,7 +64,7 @@ const BookDetail = ({
           closeModal={() => setShowBookDetail(false)}
         />
       )}
-      <div className="card" onClick={() => getSelectedBookDetail(book.id)}>
+      <div className="card" onClick={() => getSelectedBookDetail(book.id)} key={book.id}>
         <img src={book.cover} alt={book.title} className="card-img" />
         <h3>{book.title}</h3>
         <p>{book.author}</p>
