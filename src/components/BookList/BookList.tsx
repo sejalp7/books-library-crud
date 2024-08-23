@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import { BookList } from "../../datamodel";
+import { BookList, Album } from "../../datamodel";
 import "./BookList.scss";
 import ShimmerUI from "../ShimmerUI/ShimmerUI";
 import BookDetail from "../BookDetail/BookDetail";
 import Pagination from "../Pagination/Pagination";
+// import { getValue } from "@testing-library/user-event/dist/utils";
 
 // Component to show the list of books
 const BooksList = ({
@@ -14,7 +15,9 @@ const BooksList = ({
   currentPage,
   totalPages,
   onPageChange,
+  booksPerPage
 }: BookList) => {
+  console.log('books', books);
   if (books?.length === 0) {
     return <ShimmerUI />;
   }
@@ -33,7 +36,7 @@ const BooksList = ({
           />
         ))}
       </div>
-      <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={(number) => onPageChange(number)}/>
+      <Pagination currentPage={currentPage} totalPages={Math.ceil(totalPages/booksPerPage)} onPageChange={(number) => onPageChange(number)}/>
     </>
   );
 };
