@@ -48,7 +48,6 @@ function App() {
     setBookList((prevList) => [...prevList, newBook]);
   };
 
- console.log(bookList);
   return (
     <div className="App">
       <h1>Book Library</h1>
