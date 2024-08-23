@@ -48,8 +48,7 @@ function App() {
     setBookList((prevList) => [...prevList, newBook]);
   };
 
-  console.log(bookList, currentPage, booksPerPage);
-
+ console.log(bookList);
   return (
     <div className="App">
       <h1>Book Library</h1>
@@ -66,6 +65,7 @@ function App() {
                 currentPage={currentPage}
                 totalPages={bookList.length}
                 onPageChange={handlePageChange}
+                booksPerPage={booksPerPage}
               />
             }
           />
