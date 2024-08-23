@@ -5,7 +5,6 @@ import './Pagination.scss';
 const Pagination = ({ currentPage, totalPages, onPageChange }: Paginator) => {
   const pageNumbers = [];
 
-  console.log(currentPage, totalPages);
   for (let i = 1; i <= totalPages; i++) {
     pageNumbers.push(i);
   }
