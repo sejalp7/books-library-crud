@@ -17,7 +17,6 @@ const BooksList = ({
   onPageChange,
   booksPerPage
 }: BookList) => {
-  console.log('books', books);
   if (books?.length === 0) {
     return <ShimmerUI />;
   }
@@ -29,6 +28,7 @@ const BooksList = ({
       <div className="book-list flexbox" data-testid="book-list">
         {books?.map((book) => (
           <BookDetail
+            key={book.id}
             isFavourite={favouriteBooks.includes(book.id)}
             book={book}
             markBookAsFavourite={(e) => markBookAsFavourite(e, book.id)}
